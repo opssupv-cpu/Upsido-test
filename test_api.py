@@ -26,7 +26,7 @@ class Api(unittest.TestCase):
         cls.srv = make_server("127.0.0.1", 0, server.app, server_class=T, handler_class=Q)
         cls.base = "http://127.0.0.1:%d" % cls.srv.server_port
         threading.Thread(target=cls.srv.serve_forever, daemon=True).start()
-        r = requests.post(cls.base + "/api/admin/login", json={"email": "admin@test.io", "password": "s3cret-pass"})
+        r = requests.post(cls.base + "/api/admin/login", json={"email": "admin@test.io", "password": "s3cret-password"})
         cls.h = {"Authorization": "Bearer " + r.json()["token"]}
 
     @classmethod
