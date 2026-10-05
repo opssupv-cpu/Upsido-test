@@ -3,7 +3,7 @@ import os, sys, tempfile, threading, unittest
 from datetime import datetime, timedelta
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-os.environ.update(DATA_DIR=tempfile.mkdtemp(), ADMIN_EMAIL="admin@test.io", ADMIN_PASSWORD="s3cret-pass", MAX_PDF_MB="1", CORS_ORIGINS="https://upsido.ai")
+os.environ.update(DATA_DIR=tempfile.mkdtemp(), ADMIN_EMAIL="admin@test.io", ADMIN_PASSWORD="s3cret-password", MAX_PDF_MB="1", CORS_ORIGINS="https://upsido.ai")
 import requests
 import server
 from socketserver import ThreadingMixIn
